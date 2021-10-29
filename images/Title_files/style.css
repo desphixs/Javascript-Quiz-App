@@ -1,0 +1,27 @@
+form {
+    margin-top: 25px;
+}
+
+body {margin: 0px;height: 100%;width: 100%;text-align: center;}
+
+/*.my-button {
+    margin-top: 15px;
+    height: 40px;
+    font-size: 25px;
+}*/
+
+#okay {
+    font-size: 20px;
+    -webkit-appearance: button;
+    height: 35px;
+}
+
+.input-text {
+    font-size: 20px;
+}
+
+#rows-and-columns {
+    height: 30px;
+    width: 40%;
+    font-size: 15px;
+}

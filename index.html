@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Brain Games</title>
+  <link rel="icon" href="images/brain.png">
+  <meta name="description" content="">
+  <meta name="author" content="Destiny Franks">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+  
+ 	<link rel="stylesheet" href="css/bootstrap.min.css" />
+ 	<link rel="stylesheet" href="css/style.css" />
+ 	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  </head>
+
+<body>  
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href=""><img src="images/logo.png" alt=""></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#" data-toggle="dropdown"><img src="images/info.png"> <span class="myspan">Instructions</span></a>
+          <div class="dropdown-menu instructions">
+          <b>The Test</b>
+<p>The test contains 10 questions and there is no time limit. 
+
+The test is not official, it's just a nice way to see how much you know, or don't know, about General IQ. You can choose a level (Easy or Difficult).
+</p>
+<b>Count Your Score</b><p>
+You will get 1 point for each correct answer. At the end of the Quiz, your total score will be displayed. Maximum score is 10 points.</p></div>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="main-background"><div class="background home-page"><div class="ani"></div></div>
+
+    <content class="my-content">
+      <div class="container1 col-md-5 c1">
+        <h3 class="login-text">Please register yourself to play the Brain Game</h3>
+        <form id="reg-form" action="#" method="post" class="regs-form">
+            <div class="input-group">
+              <span class="input-group-addon">First Name</span>
+              <input id="fname" type="text" class="form-control" name="fname" placeholder="Enter First Name" required>
+            </div>
+              <div class="error hide" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                Enter a valid First Name
+              </div>
+            <br/>
+            <div class="input-group">
+              <span class="input-group-addon">Last Name</span>
+              <input id="lname" type="text" class="form-control" name="lname" placeholder="Enter Last Name" required>
+            </div>
+              <div class="error hide" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                Enter a valid Last Name
+              </div>
+            <br/>
+            <div class="input-group">
+              <span class="input-group-addon">E-Mail&nbsp;&nbsp;<i class="glyphicon glyphicon-envelope"></i>&nbsp;</span>
+              <input id="email" type="email" class="form-control" name="email" placeholder="Enter E-Mail Id" required>
+            </div>
+              <div class="error hide" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                Enter a valid Email Address
+              </div>
+            <br>
+            <div class="input-group">
+              <span class="input-group-addon">Contact&nbsp;<i class="glyphicon glyphicon-earphone"></i></span>
+              <input id="phone" type="number" class="form-control" name="phone" placeholder="Enter Mobile or Phone Number" required>
+            </div>
+              <div class="error hide" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                Enter a valid Contact Number
+              </div>
+            <br>
+            <div class="input-group">
+              <span class="input-group-addon">Address&nbsp;<i class="glyphicon glyphicon-home"></i></span>
+              <textarea name="address" class="form-control" placeholder="Enter Your Address" required></textarea>
+            </div>
+            <div class="error hide" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                Enter a valid Address
+              </div>
+            <div id= "btnPlay" class="btn-play">
+              <a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2"><span class="myspan">Start Quiz</span></a>
+            </div>
+          </form>
+      </div>
+      <div class="col-md-2 div-or">
+        <img id="img-or" src="images/or.png" alt="OR" />
+      </div>
+      <div class="container1 col-md-4 guest">
+        <div class="c2">
+          <h3 class="login-text">Play as Guest</h3>
+          <form id="reg-form2" action="#" method="post" class="regs-form">
+            <div class="input-group">
+              <span class="input-group-addon">Your Name</span>
+              <input id="name" type="text" class="form-control" name="name" placeholder="Enter Your Name" required>
+            </div>
+            <div class="error hide" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                Enter a valid Name
+              </div>
+            <div id="btnPlay1" class="btn-play">
+              <a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2">
+              <span class="myspan">Start Quiz</span></a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </content>
+
+    <!-- Modal -->
+    <div class="modal fade" id="quizModal" tabindex="-1" role="dialog" aria-labelledby="quizLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="quizLabel">Select the level of quiz</h4>
+            </div>
+            <div class="modal-body">
+                <button type="button" class="btn btn-success btn-lg" id="easyQuizBtn" data-level="data">
+                  Easy
+                </button>
+                <button type="button" class="btn btn-warning btn-lg" id="difficultQuizBtn" data-level="data2">
+                  Difficult
+                </button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ques-background hide" id="q-background">
+    <div id="table-div">
+      <table class="table table-striped" id="quesTable">
+        <thead>
+          <tr class="row r">
+            <th class="tableHead"><span id="head"> </span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row">
+            <td class="options"><input class="radioButton" type="radio" name="op" data-index="0" value="option">&nbsp;&nbsp;<span id="id-op1"></span></td>
+          </tr>
+          <tr class="row">
+            <td class="options"><input class="radioButton" type="radio" name="op" data-index="1" value="option">&nbsp;&nbsp;<span id="id-op2"></span></td>
+          </tr>
+          <tr class="row">
+            <td class="options"> <input class="radioButton" type="radio" name="op" data-index="2" value="option">&nbsp;&nbsp;<span id="id-op3""></span></td>
+          </tr>
+          <tr class="row">
+            <td class="options"><input class="radioButton" type="radio" name="op" data-index="3" value="option">&nbsp;&nbsp;<span id="id-op4""></span></td>
+          </tr>
+          </tbody>
+        </table>
+        <div id="btnNext" class="btn-play play">
+          <td> <a class="btn btn-default btn-outline btn-circle collapsed" data-toggle="collapse" href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2"> <span class="myspan">Next Question</span>
+          </a></td>
+        </div>
+        <div id="btnFinish" class="btn-play play hide">
+          <a class="btn btn-default btn-outline btn-circle collapsed" data-toggle="collapse" href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2"><span class="myspan">Finish</span></a>
+        </div>
+    </div>
+        </div>
+
+    
+  <div class="result-background hide" id="result-background">
+    <div class="res-background-div">
+      <h1> RESULT </h1>
+      <p> You scored <label id="correctCount"></label> out of 10</p>
+      <p id="message"></p>
+
+      <!-- Button trigger modal -->
+      <div id="play-again" class="btn-play play" >
+          <a class="btn btn-default btn-outline btn-circle collapsed" data-toggle="collapse" href="" onclick="window.location.reload()" aria-expanded="false" aria-controls="nav-collapse2"><span class="myspan">Play Again</span></a>
+        </div>
+
+      <div id="showAnswers" class="btn-play play">
+          <a class="btn btn-default btn-outline btn-circle collapsed" data-toggle="collapse" href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2"><span class="myspan">Answers</span></a>
+        </div>
+      
+    </div>
+</body>
+</html>
